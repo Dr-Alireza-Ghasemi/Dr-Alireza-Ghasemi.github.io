@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Alireza Ghasemi</title>
+<title>Dr. Alireza Ghasemi | CyberLifeTips</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body {
@@ -13,11 +13,13 @@
     padding:40px 20px;
   }
   .container { width:100%; max-width:420px; text-align:center; }
-  .avatar {
+  .avatar-container {
     width:96px; height:96px; border-radius:50%;
-    background:#21262d; margin:0 auto 16px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:36px;
+    margin:0 auto 16px; overflow:hidden;
+    border:2px solid #30363d; background:#21262d;
+  }
+  .avatar-container img {
+    width:100%; height:100%; object-fit:cover;
   }
   h1 { font-size:22px; margin-bottom:6px; }
   p.bio { color:#8b949e; font-size:14px; line-height:1.8; margin-bottom:28px; }
@@ -35,14 +37,20 @@
 </head>
 <body>
 <div class="container">
-  <div class="avatar">👨‍💻</div>
+  <!-- آواتار شما (از اینستاگرام/یوتیوب) -->
+  <div class="avatar-container">
+    <img src="https://github.com/Dr-Alireza-Ghasemi/Dr-Alireza-Ghasemi.github.io/raw/main/avatar.jpg" alt="Alireza Ghasemi" onerror="this.src='https://avatars.githubusercontent.com/u/105775790?v=4'">
+  </div>
+  
   <h1>Dr. Alireza Ghasemi</h1>
-  <p class="bio">آموزش ترفندهای خفن تکنولوژی و کامپیوتر<br>هوش مصنوعی • امنیت سایبری • اتوماسیون صنعتی</p>
+  <p class="bio">ترفندهای خفن تکنولوژی، هوش مصنوعی و امنیت سایبری 🚀</p>
 
-  <a class="link" href="https://instagram.com/cyberlifetips" target="_blank"><span class="emoji">📸</span> اینستاگرام — cyberlifetips</a>
-  <a class="link" href="https://github.com/Dr-Alireza-Ghasemi" target="_blank"><span class="emoji">💻</span> گیت‌هاب — کدها و ابزارهای رایگان</a>
+  <a class="link" href="https://instagram.com/cyberlifetips" target="_blank"><span class="emoji">📸</span> اینستاگرام — CyberLifeTips</a>
+  <a class="link" href="https://www.youtube.com/@aghfars" target="_blank"><span class="emoji">▶️</span> کانال یوتیوب — آموزش‌های تخصصی</a>
+  <a class="link" href="https://t.me/CyberLifeTips_Bot" target="_blank"><span class="emoji">🤖</span> ربات تلگرام — ارتباط و ابزارها</a>
+  <a class="link" href="https://github.com/Dr-Alireza-Ghasemi" target="_blank"><span class="emoji">💻</span> گیت‌هاب — اسکریپت‌ها و پروژه‌ها</a>
 
-  <footer>cyberlifetips</footer>
+  <footer>cyberlifetips © 2026</footer>
 </div>
 </body>
 </html>
