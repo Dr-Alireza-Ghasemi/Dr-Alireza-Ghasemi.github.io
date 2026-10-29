@@ -166,14 +166,14 @@
     a.link{
       display:flex;
       align-items:center;
-      justify-content:space-between;
+      justify-content:flex-start;
       gap:12px;
       text-decoration:none;
       color:var(--linkText);
       background:color-mix(in srgb, var(--card) 78%, transparent);
       border:1px solid var(--border);
       border-radius:14px;
-      padding:12px;
+      padding:12px 14px;
       transition:.18s ease;
       position:relative;
       overflow:hidden;
@@ -203,9 +203,10 @@
     .left{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap:12px;
       min-width:0;
       position:relative;
+      width:100%;
     }
 
     .ico{
@@ -249,14 +250,6 @@
       text-align:right;
     }
 
-    .arrow{
-      opacity:.65;
-      font-size:16px;
-      flex:0 0 auto;
-      padding:0 6px;
-      position:relative;
-    }
-
     /* پروژه‌های گیت‌هاب (کنار هم) */
     .github-group > .link{
       border-radius:14px 14px 0 0;
@@ -278,8 +271,7 @@
     .project-link{
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:8px;
+      justify-content:center;
       padding:10px 12px;
       color:var(--linkText);
       text-decoration:none;
@@ -290,22 +282,12 @@
       transition:.18s ease;
       white-space:nowrap;
       overflow:hidden;
+      text-overflow:ellipsis;
     }
 
     .project-link:hover{
       background:var(--btnHover);
       transform:translateY(-1px);
-    }
-
-    .project-link span:first-child{
-      overflow:hidden;
-      text-overflow:ellipsis;
-    }
-
-    .project-link span:last-child{
-      opacity:.65;
-      direction:ltr;
-      flex:0 0 auto;
     }
 
     footer{
@@ -359,7 +341,6 @@
               <span>@CyberLifeTips_Bot</span>
             </div>
           </div>
-          <div class="arrow">↗</div>
         </a>
 
         <!-- 2. پروژه‌های رایگان در گیت‌هاب (با دو دکمه‌ی کنار هم) -->
@@ -374,17 +355,14 @@
                 <span>github.com/Dr-Alireza-Ghasemi</span>
               </div>
             </div>
-            <div class="arrow">↗</div>
           </a>
 
           <div class="projects" aria-label="پروژه‌های گیت‌هاب">
             <a class="project-link" href="https://github.com/Dr-Alireza-Ghasemi/mineral-processing-functions" target="_blank" rel="noopener">
-              <span>افزونه اکسل فرآوری</span>
-              <span>↗</span>
+              افزونه اکسل فرآوری
             </a>
             <a class="project-link" href="https://github.com/Dr-Alireza-Ghasemi/Tomanizer" target="_blank" rel="noopener">
-              <span>افزونه تبدیل ارز</span>
-              <span>↗</span>
+              افزونه تبدیل ارز
             </a>
           </div>
         </div>
@@ -400,7 +378,6 @@
               <span>@AlirexaGh</span>
             </div>
           </div>
-          <div class="arrow">↗</div>
         </a>
 
         <!-- 4. آدرس پیج اینستاگرام -->
@@ -414,7 +391,6 @@
               <span>@cyberlifetips</span>
             </div>
           </div>
-          <div class="arrow">↗</div>
         </a>
 
         <!-- 5. آدرس یوتیوب -->
@@ -428,7 +404,6 @@
               <span>@aghfars</span>
             </div>
           </div>
-          <div class="arrow">↗</div>
         </a>
 
       </section>
