@@ -97,7 +97,6 @@
       letter-spacing: .7px;
     }
 
-    /* تعویض تم فقط با کلیک کاربر؛ بدون حالت خودکار */
     .theme-toggle {
       position: absolute;
       top: 4px;
@@ -229,30 +228,46 @@
 
     .sub-buttons {
       display: flex;
-      gap: 9px;
+      gap: 10px;
       margin-top: 10px;
     }
 
-    /* دکمه‌های داخلی: هم‌سطح کادر، فقط با حاشیه */
-    .sub-btn {
-      min-width: 0;
+    /* قاب برجسته دور دکمه‌های داخلی گیت‌هاب */
+    .sub-button-frame {
       flex: 1;
-      padding: 10px 7px;
+      min-width: 0;
+      padding: 5px;
       border: 1px solid var(--button-border);
-      border-radius: 12px;
-      background: transparent;
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow:
+        3px 3px 6px var(--shadow-dark),
+        -3px -3px 6px var(--shadow-light);
+    }
+
+    /* خود دکمه داخل قاب با حالت فرورفته */
+    .sub-btn {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      padding: 9px 6px;
+      border: 1px solid var(--button-border);
+      border-radius: 10px;
+      background: var(--surface);
       color: var(--muted);
       text-align: center;
       text-decoration: none;
       font-size: .82rem;
       line-height: 1.45;
-      transition: border-color .2s ease, color .2s ease, background .2s ease;
+      box-shadow:
+        inset 2px 2px 4px var(--shadow-dark),
+        inset -2px -2px 4px var(--shadow-light);
+      transition: color .2s ease, border-color .2s ease;
     }
 
     .sub-btn:hover {
-      border-color: var(--accent);
       color: var(--accent);
-      background: rgba(56, 189, 248, .06);
+      border-color: var(--accent);
     }
 
     footer {
@@ -269,38 +284,25 @@
       body {
         padding-inline: 11px;
       }
-
       .container {
         gap: 11px;
       }
-
       .profile-card {
         padding: 15px;
       }
-
       .profile-avatar {
         width: 82px;
         height: 82px;
         flex-basis: 82px;
       }
-
       .profile-bio {
         font-size: .84rem;
       }
-
       .link-title {
         font-size: .91rem;
       }
-
       .sub-btn {
         font-size: .75rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
       }
     }
   </style>
@@ -350,10 +352,14 @@
         <i class="fa-solid fa-angle-left card-arrow"></i>
       </div>
       <div class="sub-buttons">
-        <a class="sub-btn" href="https://github.com/Dr-Alireza-Ghasemi/mineral-processing-functions"
-           target="_blank" rel="noopener noreferrer">افزونه اکسل روابط فرآوری</a>
-        <a class="sub-btn" href="https://github.com/Dr-Alireza-Ghasemi/Tomanizer"
-           target="_blank" rel="noopener noreferrer">افزونه تبدیل ارز</a>
+        <div class="sub-button-frame">
+          <a class="sub-btn" href="https://github.com/Dr-Alireza-Ghasemi/mineral-processing-functions"
+             target="_blank" rel="noopener noreferrer">افزونه اکسل روابط فرآوری</a>
+        </div>
+        <div class="sub-button-frame">
+          <a class="sub-btn" href="https://github.com/Dr-Alireza-Ghasemi/Tomanizer"
+             target="_blank" rel="noopener noreferrer">افزونه تبدیل ارز</a>
+        </div>
       </div>
     </section>
 
@@ -388,16 +394,27 @@
     const themeToggle = document.getElementById("themeToggle");
     const themeIcon = document.getElementById("themeIcon");
 
-    // پیش‌فرض: شب. تغییر حالت فقط با کلیک کاربر انجام می‌شود.
+    // تنظیم خودکار تم بر اساس ساعت محلی دستگاه (۶ صبح تا ۱۸ عصر روشن، بقیه ساعات تیره)
+    function autoUpdateTheme() {
+      const hour = new Date().getHours();
+      const isDaytime = hour >= 6 && hour < 18;
+
+      document.body.classList.toggle("light", isDaytime);
+      if (themeIcon) {
+        themeIcon.className = isDaytime ? "fa-solid fa-sun" : "fa-solid fa-moon";
+      }
+    }
+
+    // اجرای اولیه هنگام لود صفحه
+    autoUpdateTheme();
+
+    // بررسی خودکار هر یک دقیقه در صورت باز بودن صفحه
+    setInterval(autoUpdateTheme, 60 * 1000);
+
+    // دکمه بالای صفحه برای جابجایی دستی موقت (در صورت نیاز کاربر)
     themeToggle.addEventListener("click", () => {
       const isLight = document.body.classList.toggle("light");
-      themeIcon.className = isLight
-        ? "fa-solid fa-sun"
-        : "fa-solid fa-moon";
-      themeToggle.setAttribute(
-        "aria-label",
-        isLight ? "فعال‌کردن حالت شب" : "فعال‌کردن حالت روز"
-      );
+      themeIcon.className = isLight ? "fa-solid fa-sun" : "fa-solid fa-moon";
     });
   </script>
 </body>
