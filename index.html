@@ -1,265 +1,404 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دکتر علیرضا قاسمی | Cyber Life Tips</title>
-    <!-- فونت وزیرمتن استاندارد -->
-    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Vazirmatn', sans-serif;
-        }
-        body {
-            background: linear-gradient(135deg, #0b0f19 0%, #111827 50%, #0f172a 100%);
-            color: #f3f4f6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 14px;
-        }
-        .container {
-            width: 100%;
-            max-width: 480px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        /* هدر با رنگ‌آمیزی دقیق C و L و Tips */
-        .brand-header {
-            text-align: center;
-            margin-bottom: 2px;
-        }
-        .header-title {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: -0.3px;
-        }
-        .header-title .blue {
-            color: #38bdf8;
-        }
-        .header-subtitle {
-            font-size: 0.85rem;
-            color: #9ca3af;
-            letter-spacing: 0.8px;
-            margin-top: 2px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>دکتر علیرضا قاسمی | Cyber Life Tips</title>
 
-        /* کارت پروفایل با سایز استاندارد و خوانا */
-        .profile-card {
-            background: rgba(30, 41, 59, 0.75);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 18px;
-            padding: 18px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.25);
-        }
-        .profile-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-align: center;
-        }
-        .profile-body {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-        .profile-avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid rgba(56, 189, 248, 0.4);
-            flex-shrink: 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .profile-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .profile-bio {
-            flex: 1;
-            font-size: 0.82rem;
-            color: #94a3b8;
-            line-height: 1.6;
-            text-align: right;
-        }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
-        /* باکس‌های لینک استاندارد و مرتب */
-        .card {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 16px;
-            padding: 15px 18px;
-            text-decoration: none;
-            color: #f3f4f6;
-            transition: all 0.25s ease;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .card:hover {
-            background: rgba(30, 41, 59, 0.85);
-            border-color: rgba(56, 189, 248, 0.35);
-            transform: translateY(-2px);
-        }
-        .card-row {
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-        .icon-box {
-            width: 42px;
-            height: 42px;
-            background: rgba(56, 189, 248, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #38bdf8;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        .link-title {
-            flex: 1;
-            text-align: center;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #ffffff;
-            padding-left: 42px; /* بالانس دقیق با عرض آیکون سمت راست */
-            white-space: nowrap; /* جلوگیری از شکستن خط عنوان ربات تلگرام */
-        }
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111827;
+      --surface: #192437;
+      --surface-deep: #141e2e;
+      --text: #f3f6fb;
+      --muted: #a4b0c2;
+      --accent: #38bdf8;
+      --border: rgba(255, 255, 255, .07);
+      --shadow-light: rgba(255, 255, 255, .045);
+      --shadow-dark: rgba(0, 0, 0, .38);
+      --button-bg: #192437;
+      --button-border: rgba(148, 163, 184, .17);
+    }
 
-        /* دکمه‌های گیت‌هاب */
-        .sub-buttons {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-        }
-        .sub-btn {
-            flex: 1;
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 10px;
-            padding: 10px 8px;
-            text-align: center;
-            color: #cbd5e1;
-            font-size: 0.82rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.2s ease;
-        }
-        .sub-btn:hover {
-            background: #38bdf8;
-            color: #0b0f19;
-            border-color: #38bdf8;
-            font-weight: 600;
-        }
+    body.light {
+      color-scheme: light;
+      --bg: #e8edf4;
+      --surface: #e8edf4;
+      --surface-deep: #dce3ec;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #0284c7;
+      --border: rgba(255, 255, 255, .7);
+      --shadow-light: rgba(255, 255, 255, .9);
+      --shadow-dark: rgba(148, 163, 184, .45);
+      --button-bg: #e8edf4;
+      --button-border: rgba(100, 116, 139, .25);
+    }
 
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #64748b;
-        }
-    </style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 18px 14px 22px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    .container {
+      width: min(100%, 460px);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .brand-header {
+      position: relative;
+      text-align: center;
+      padding: 2px 48px 4px;
+    }
+
+    .header-title {
+      direction: ltr;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: clamp(1.55rem, 6vw, 1.9rem);
+      line-height: 1.25;
+      font-weight: 750;
+      letter-spacing: -.7px;
+      color: var(--text);
+    }
+
+    .blue {
+      color: var(--accent);
+    }
+
+    .header-subtitle {
+      margin-top: 5px;
+      direction: ltr;
+      color: var(--muted);
+      font-family: Inter, system-ui, sans-serif;
+      font-size: .95rem;
+      letter-spacing: .7px;
+    }
+
+    /* تعویض تم فقط با کلیک کاربر؛ بدون حالت خودکار */
+    .theme-toggle {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--button-border);
+      border-radius: 13px;
+      color: var(--accent);
+      background: var(--button-bg);
+      box-shadow:
+        4px 4px 9px var(--shadow-dark),
+        -4px -4px 9px var(--shadow-light);
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .theme-toggle:active {
+      transform: scale(.96);
+      box-shadow:
+        inset 3px 3px 7px var(--shadow-dark),
+        inset -3px -3px 7px var(--shadow-light);
+    }
+
+    .profile-card,
+    .link-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow:
+        7px 7px 16px var(--shadow-dark),
+        -7px -7px 16px var(--shadow-light);
+      transition: background .25s ease, box-shadow .25s ease, color .25s ease;
+    }
+
+    .profile-card {
+      padding: 18px;
+      border-radius: 22px;
+    }
+
+    .profile-name {
+      margin: 0 0 14px;
+      text-align: center;
+      color: var(--text);
+      font-size: 1.25rem;
+      font-weight: 750;
+    }
+
+    .profile-body {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .profile-avatar {
+      width: 96px;
+      height: 96px;
+      flex: 0 0 96px;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 2px solid rgba(56, 189, 248, .55);
+    }
+
+    .profile-avatar img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-bio {
+      flex: 1;
+      min-width: 0;
+      color: var(--muted);
+      font-size: .91rem;
+      line-height: 1.75;
+      text-align: right;
+    }
+
+    .link-card {
+      display: block;
+      padding: 12px 14px;
+      border-radius: 19px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .link-card:hover {
+      transform: translateY(-1px);
+    }
+
+    .card-row {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .icon-box {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--surface);
+      color: var(--accent);
+      font-size: 1.25rem;
+      box-shadow:
+        4px 4px 9px var(--shadow-dark),
+        -4px -4px 9px var(--shadow-light);
+    }
+
+    .link-title {
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 650;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .card-arrow {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .sub-buttons {
+      display: flex;
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    /* دکمه‌های داخلی: هم‌سطح کادر، فقط با حاشیه */
+    .sub-btn {
+      min-width: 0;
+      flex: 1;
+      padding: 10px 7px;
+      border: 1px solid var(--button-border);
+      border-radius: 12px;
+      background: transparent;
+      color: var(--muted);
+      text-align: center;
+      text-decoration: none;
+      font-size: .82rem;
+      line-height: 1.45;
+      transition: border-color .2s ease, color .2s ease, background .2s ease;
+    }
+
+    .sub-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(56, 189, 248, .06);
+    }
+
+    footer {
+      width: min(100%, 460px);
+      margin: 18px auto 0;
+      color: var(--muted);
+      text-align: center;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: .78rem;
+      opacity: .75;
+    }
+
+    @media (max-width: 380px) {
+      body {
+        padding-inline: 11px;
+      }
+
+      .container {
+        gap: 11px;
+      }
+
+      .profile-card {
+        padding: 15px;
+      }
+
+      .profile-avatar {
+        width: 82px;
+        height: 82px;
+        flex-basis: 82px;
+      }
+
+      .profile-bio {
+        font-size: .84rem;
+      }
+
+      .link-title {
+        font-size: .91rem;
+      }
+
+      .sub-btn {
+        font-size: .75rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <main class="container">
+    <header class="brand-header">
+      <button class="theme-toggle" id="themeToggle" type="button"
+              aria-label="تغییر تم شب و روز" title="تغییر تم">
+        <i class="fa-solid fa-moon" id="themeIcon"></i>
+      </button>
 
-    <div class="container">
-        <!-- هدر با رنگ C و L و کلمه Tips آبی -->
-        <div class="brand-header">
-            <div class="header-title"><span class="blue">C</span>yber <span class="blue">L</span>ife <span class="blue">Tips</span></div>
-            <div class="header-subtitle">CLTips.ir</div>
+      <div class="header-title">
+        <span class="blue">C</span>yber
+        <span class="blue">L</span>ife
+        <span class="blue">Tips</span>
+      </div>
+      <div class="header-subtitle">CLTips.ir</div>
+    </header>
+
+    <section class="profile-card">
+      <h1 class="profile-name">دکتر علیرضا قاسمی</h1>
+      <div class="profile-body">
+        <div class="profile-avatar">
+          <img src="avatar.jpg" alt="دکتر علیرضا قاسمی">
         </div>
-
-        <!-- کارت پروفایل -->
-        <div class="profile-card">
-            <h1 class="profile-name">دکتر علیرضا قاسمی</h1>
-            <div class="profile-body">
-                <div class="profile-avatar">
-                    <img src="avatar.jpg" alt="دکتر علیرضا قاسمی">
-                </div>
-                <div class="profile-bio">
-                    مدیرعامل | استاد دانشگاه<br>
-                    برنامه‌نویسی، شبیه‌سازی، کنترل و ابزار دقیق، طراحی، سالیدورکس، ساخت و تولید، امنیت شبکه و IT
-                </div>
-            </div>
+        <div class="profile-bio">
+          مدیرعامل | استاد دانشگاه<br>
+          برنامه‌نویسی، شبیه‌سازی، کنترل و ابزار دقیق، طراحی، سالیدورکس، ساخت و تولید، امنیت شبکه و IT
         </div>
+      </div>
+    </section>
 
-        <!-- ۱. ثبت نام در دوره های تخصصی -->
-        <a href="https://t.me/CyberLifeTips_Bot" class="card" target="_blank">
-            <div class="card-row">
-                <div class="icon-box">
-                    <i class="fa-brands fa-telegram"></i>
-                </div>
-                <span class="link-title">ثبت‌نام در دوره‌های تخصصی (ربات تلگرام)</span>
-            </div>
-        </a>
+    <a class="link-card" href="https://t.me/CyberLifeTips_Bot" target="_blank" rel="noopener noreferrer">
+      <div class="card-row">
+        <span class="icon-box"><i class="fa-brands fa-telegram"></i></span>
+        <span class="link-title">ثبت‌نام در دوره‌های تخصصی (ربات تلگرام)</span>
+        <i class="fa-solid fa-angle-left card-arrow"></i>
+      </div>
+    </a>
 
-        <!-- ۲. پروژه های رایگان در گیت هاب -->
-        <div class="card">
-            <div class="card-row">
-                <div class="icon-box">
-                    <i class="fa-brands fa-github"></i>
-                </div>
-                <span class="link-title">پروژه‌های رایگان در گیت‌هاب</span>
-            </div>
-            <div class="sub-buttons">
-                <a href="https://github.com/Dr-Alireza-Ghasemi/mineral-processing-functions" class="sub-btn" target="_blank">افزونه اکسل روابط فرآوری</a>
-                <a href="https://github.com/Dr-Alireza-Ghasemi/Tomanizer" class="sub-btn" target="_blank">افزونه تبدیل ارز</a>
-            </div>
-        </div>
+    <section class="link-card">
+      <div class="card-row">
+        <span class="icon-box"><i class="fa-brands fa-github"></i></span>
+        <span class="link-title">پروژه‌های رایگان در گیت‌هاب</span>
+        <i class="fa-solid fa-angle-left card-arrow"></i>
+      </div>
+      <div class="sub-buttons">
+        <a class="sub-btn" href="https://github.com/Dr-Alireza-Ghasemi/mineral-processing-functions"
+           target="_blank" rel="noopener noreferrer">افزونه اکسل روابط فرآوری</a>
+        <a class="sub-btn" href="https://github.com/Dr-Alireza-Ghasemi/Tomanizer"
+           target="_blank" rel="noopener noreferrer">افزونه تبدیل ارز</a>
+      </div>
+    </section>
 
-        <!-- ۳. سفارش تبلیغات در پیج اینستاگرام -->
-        <a href="https://t.me/AlirexaGh" class="card" target="_blank">
-            <div class="card-row">
-                <div class="icon-box">
-                    <i class="fa-brands fa-telegram"></i>
-                </div>
-                <span class="link-title">سفارش تبلیغات در پیج اینستاگرام</span>
-            </div>
-        </a>
+    <a class="link-card" href="https://t.me/AlirexaGh" target="_blank" rel="noopener noreferrer">
+      <div class="card-row">
+        <span class="icon-box"><i class="fa-brands fa-telegram"></i></span>
+        <span class="link-title">سفارش تبلیغات در پیج اینستاگرام</span>
+        <i class="fa-solid fa-angle-left card-arrow"></i>
+      </div>
+    </a>
 
-        <!-- ۴. آدرس پیج اینستاگرام -->
-        <a href="https://instagram.com/cyberlifetips" class="card" target="_blank">
-            <div class="card-row">
-                <div class="icon-box">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-                <span class="link-title">آدرس پیج اینستاگرام</span>
-            </div>
-        </a>
+    <a class="link-card" href="https://instagram.com/cyberlifetips" target="_blank" rel="noopener noreferrer">
+      <div class="card-row">
+        <span class="icon-box"><i class="fa-brands fa-instagram"></i></span>
+        <span class="link-title">آدرس پیج اینستاگرام</span>
+        <i class="fa-solid fa-angle-left card-arrow"></i>
+      </div>
+    </a>
 
-        <!-- ۵. آدرس یوتیوب -->
-        <a href="https://youtube.com/@aghfars" class="card" target="_blank">
-            <div class="card-row">
-                <div class="icon-box">
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
-                <span class="link-title">آدرس یوتیوب</span>
-            </div>
-        </a>
-    </div>
+    <a class="link-card" href="https://youtube.com/@aghfars" target="_blank" rel="noopener noreferrer">
+      <div class="card-row">
+        <span class="icon-box"><i class="fa-brands fa-youtube"></i></span>
+        <span class="link-title">آدرس یوتیوب</span>
+        <i class="fa-solid fa-angle-left card-arrow"></i>
+      </div>
+    </a>
+  </main>
 
-    <footer>
-        cyberlifetips • 2026 ©
-    </footer>
+  <footer>cyberlifetips • 2026 ©</footer>
 
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    // پیش‌فرض: شب. تغییر حالت فقط با کلیک کاربر انجام می‌شود.
+    themeToggle.addEventListener("click", () => {
+      const isLight = document.body.classList.toggle("light");
+      themeIcon.className = isLight
+        ? "fa-solid fa-sun"
+        : "fa-solid fa-moon";
+      themeToggle.setAttribute(
+        "aria-label",
+        isLight ? "فعال‌کردن حالت شب" : "فعال‌کردن حالت روز"
+      );
+    });
+  </script>
 </body>
 </html>
