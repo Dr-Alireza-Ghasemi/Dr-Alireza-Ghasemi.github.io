@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دکتر علیرضا قاسمی | Cyber Life Tips</title>
-    <!-- استفاده از فونت استاندارد و زیبای وزیرمتن (مشابه یکان) -->
+    <!-- فونت استاندارد وزیرمتن (مشابه یکان) -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -48,19 +48,68 @@
         .header-title span.blue {
             color: #38bdf8;
         }
+
+        /* کارت پروفایل اختصاصی */
+        .profile-card {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        .profile-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+        }
+        .profile-body {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        /* عکس چهارگوش لبه گرد در سمت راست */
+        .profile-avatar {
+            width: 95px;
+            height: 95px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 2px solid rgba(56, 189, 248, 0.5);
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* متن بیو در سمت چپ */
+        .profile-bio {
+            flex: 1;
+            font-size: 0.82rem;
+            color: #94a3b8;
+            line-height: 1.65;
+            text-align: right;
+        }
+
+        /* استایل باکس‌های لینک */
         .card {
             background: rgba(30, 41, 59, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
-            padding: 18px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            padding: 14px 18px;
             text-decoration: none;
             color: #f3f4f6;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
         .card:hover {
             background: rgba(30, 41, 59, 0.9);
@@ -68,62 +117,12 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(56, 189, 248, 0.15);
         }
-        .profile-card {
-            background: rgba(30, 41, 59, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 22px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 14px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        }
-        .avatar-container {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2px solid #38bdf8;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-        }
-        .avatar-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .profile-info h1 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-        .profile-info p {
-            font-size: 0.82rem;
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-        .link-card {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 12px;
-            padding: 20px;
-        }
-        .link-content {
+        .card-row {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 14px;
             width: 100%;
         }
-        .link-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: #ffffff;
-        }
+        /* آیکون در سمت راست */
         .icon-box {
             width: 44px;
             height: 44px;
@@ -133,14 +132,26 @@
             align-items: center;
             justify-content: center;
             color: #38bdf8;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             flex-shrink: 0;
         }
+        /* متن کاملاً وسط‌چین شده */
+        .link-title {
+            flex: 1;
+            text-align: center;
+            font-size: 0.96rem;
+            font-weight: 600;
+            color: #ffffff;
+            /* بالانس کردن فاصله با توجه به عرض آیکون سمت راست */
+            padding-left: 44px; 
+        }
+
+        /* دکمه‌های گیت هاب */
         .sub-buttons {
             display: flex;
             gap: 10px;
             width: 100%;
-            margin-top: 4px;
+            margin-top: 2px;
         }
         .sub-btn {
             flex: 1;
@@ -161,6 +172,7 @@
             border-color: #38bdf8;
             font-weight: 600;
         }
+
         footer {
             margin-top: 25px;
             text-align: center;
@@ -172,50 +184,53 @@
 <body>
 
     <div class="container">
-        <!-- هدر سایت -->
+        <!-- هدر -->
         <div>
             <div class="header-title">Cyber <span class="blue">Life</span> Tips</div>
             <div class="header-subtitle">CLTips.ir</div>
         </div>
 
-        <!-- کارت پروفایل -->
+        <!-- کارت پروفایل جدید: عنوان در بالا، عکس چهارگوش لبه‌گرد سمت راست و متن سمت چپ -->
         <div class="profile-card">
-            <div class="avatar-container">
-                <img src="avatar.jpg" alt="دکتر علیرضا قاسمی">
-            </div>
-            <div class="profile-info">
-                <h1>دکتر علیرضا قاسمی</h1>
-                <p>مدیرعامل | استاد دانشگاه<br>برنامه‌نویسی، شبیه‌سازی، کنترل و ابزار دقیق، طراحی، سالیدورکس، ساخت و تولید، امنیت شبکه و IT</p>
+            <h1 class="profile-name">دکتر علیرضا قاسمی</h1>
+            <div class="profile-body">
+                <div class="profile-avatar">
+                    <img src="avatar.jpg" alt="دکتر علیرضا قاسمی">
+                </div>
+                <div class="profile-bio">
+                    مدیرعامل | استاد دانشگاه<br>
+                    برنامه‌نویسی، شبیه‌سازی، کنترل و ابزار دقیق، طراحی، سالیدورکس، ساخت و تولید، امنیت شبکه و IT
+                </div>
             </div>
         </div>
 
         <!-- ۱. ثبت نام در دوره های تخصصی -->
-        <a href="https://t.me/CyberLifeTips_Bot" class="card link-card" target="_blank">
-            <div class="link-content">
+        <a href="https://t.me/CyberLifeTips_Bot" class="card" target="_blank">
+            <div class="card-row">
                 <div class="icon-box">
                     <i class="fa-brands fa-telegram"></i>
                 </div>
-                <span class="link-title">ثبت‌نام در دوره‌های تخصصی</span>
+                <span class="link-title">ثبت‌نام در دوره‌های تخصصی (ربات تلگرام)</span>
             </div>
         </a>
 
-        <!-- ۲. پروژه های رایگان در گیت هاب -->
-        <div class="card link-card">
-            <div class="link-content">
+        <!-- ۲. پروژه های رایگان در گیت هاب (آیکون راست، عنوان وسط‌چین، دکمه‌های کنار هم) -->
+        <div class="card">
+            <div class="card-row">
                 <div class="icon-box">
                     <i class="fa-brands fa-github"></i>
                 </div>
                 <span class="link-title">پروژه‌های رایگان در گیت‌هاب</span>
             </div>
             <div class="sub-buttons">
-                <a href="https://github.com/Dr-Alireza-Ghasemi/mineral-processing-functions" class="sub-btn" target="_blank">افزونه اکسل فرآوری</a>
+                <a href="https://github.com/Dr-Alireza-Ghasemi/mineral-processing-functions" class="sub-btn" target="_blank">افزونه اکسل روابط فرآوری</a>
                 <a href="https://github.com/Dr-Alireza-Ghasemi/Tomanizer" class="sub-btn" target="_blank">افزونه تبدیل ارز</a>
             </div>
         </div>
 
         <!-- ۳. سفارش تبلیغات در پیج اینستاگرام -->
-        <a href="https://t.me/AlirexaGh" class="card link-card" target="_blank">
-            <div class="link-content">
+        <a href="https://t.me/AlirexaGh" class="card" target="_blank">
+            <div class="card-row">
                 <div class="icon-box">
                     <i class="fa-brands fa-telegram"></i>
                 </div>
@@ -224,8 +239,8 @@
         </a>
 
         <!-- ۴. آدرس پیج اینستاگرام -->
-        <a href="https://instagram.com/cyberlifetips" class="card link-card" target="_blank">
-            <div class="link-content">
+        <a href="https://instagram.com/cyberlifetips" class="card" target="_blank">
+            <div class="card-row">
                 <div class="icon-box">
                     <i class="fa-brands fa-instagram"></i>
                 </div>
@@ -234,8 +249,8 @@
         </a>
 
         <!-- ۵. آدرس یوتیوب -->
-        <a href="https://youtube.com/@aghfars" class="card link-card" target="_blank">
-            <div class="link-content">
+        <a href="https://youtube.com/@aghfars" class="card" target="_blank">
+            <div class="card-row">
                 <div class="icon-box">
                     <i class="fa-brands fa-youtube"></i>
                 </div>
